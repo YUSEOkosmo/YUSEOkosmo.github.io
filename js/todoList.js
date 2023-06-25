@@ -12,6 +12,8 @@ function saveTODOs(){
 function removeTODO(event){
     const target_li = event.target.parentElement;
     target_li.remove();
+    todos = todos.filter((toDo) => toDo.id !== parseInt(target_li.id));
+    saveTODOs();
 }
 
 function writeTODOonPage(todo){
@@ -52,5 +54,4 @@ function handleTodoForm(event){
     saveTODOs();
 }
 
-todoForm.addEventListener("submit",handleTodoForm);
-
+todoForm.addEventListener("submit", handleTodoForm);
