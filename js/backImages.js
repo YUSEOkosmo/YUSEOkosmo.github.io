@@ -20,5 +20,5 @@ const backgrounds = [
 ]
 const selectedImg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
 backImg.classList.add("backgroundImg");
-backImg.src = `../images/${selectedImg}`;
+backImg.src = `images/${selectedImg}`;
 document.body.appendChild(backImg);
