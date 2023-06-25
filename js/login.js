@@ -7,6 +7,7 @@ const savedUserID = localStorage.getItem("userID");
 
 const HIDDEN_CLASS = "hidden"
 const USER_ID = "userID"
+const CENTER_CSS = "center";
 
 let nameVal = ""
 function checkLoggedIn(){
@@ -15,8 +16,11 @@ function checkLoggedIn(){
         loginForm.addEventListener("submit", getName);
         userID.innerText = "";
         userID.classList.add(HIDDEN_CLASS);
+        userID.classList.add(CENTER_CSS);
     }
     else{
+        userID.classList.add(CENTER_CSS);
+        logoutButton.classList.add(CENTER_CSS);
         nameVal = savedUserID;
         showUser();
     }
@@ -44,6 +48,7 @@ function doLogout(event){
         userID.innerText = "";
         userID.classList.add(HIDDEN_CLASS);
         logoutButton.classList.add(HIDDEN_CLASS);
+        logoutButton.classList.add(CENTER_CSS);
         localStorage.removeItem(USER_ID,nameVal);
     }
 }

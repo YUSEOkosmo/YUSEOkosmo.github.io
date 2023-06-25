@@ -18,9 +18,10 @@ function removeTODO(event){
 
 function writeTODOonPage(todo){
     const li = document.createElement("li");
+    
     li.id = todo.id;
     const span = document.createElement("span");
-    span.innerText = todo.text;
+    span.innerText = `${todo.text}　　`;
 
     const button = document.createElement("button");
     button.innerText = "❌Remove";
