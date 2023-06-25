@@ -1,0 +1,9 @@
+
+.headLine{
+    display: flex;
+    align-self: center;
+}
+
+.hidden{
+    display: none;
+}
